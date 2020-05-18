@@ -151,7 +151,6 @@ RadioGroup;C:\Users\thachnls\source\repos\Foodi\Foodi\obj\Debug\90\lp\10\jl\res\
 RadioGroup;C:\Users\thachnls\source\repos\Foodi\Foodi\obj\Debug\90\lp\10\jl\res\layout\data_form_segmented_editor.xml
 RelativeLayout;C:\Users\thachnls\source\repos\Foodi\Foodi\obj\Debug\90\lp\10\jl\res\layout\data_form_editor_layout_1.xml
 RelativeLayout;C:\Users\thachnls\source\repos\Foodi\Foodi\obj\Debug\90\lp\10\jl\res\layout\data_form_editor_layout_2.xml
-RelativeLayout;obj\Debug\90\res\layout\activity_main.xml
 resources;C:\Users\thachnls\source\repos\Foodi\Foodi\obj\Debug\90\lp\10\jl\res\values\attrs.xml
 resources;C:\Users\thachnls\source\repos\Foodi\Foodi\obj\Debug\90\lp\10\jl\res\values\colors.xml
 resources;C:\Users\thachnls\source\repos\Foodi\Foodi\obj\Debug\90\lp\10\jl\res\values\dimens.xml
@@ -275,4 +274,3 @@ ToggleButton;C:\Users\thachnls\source\repos\Foodi\Foodi\obj\Debug\90\lp\10\jl\re
 vector;obj\Debug\90\res\drawable\icon_next.xml
 View;C:\Users\thachnls\source\repos\Foodi\Foodi\obj\Debug\90\lp\10\jl\res\layout\token.xml
 View;C:\Users\thachnls\source\repos\Foodi\Foodi\obj\Debug\90\lp\11\jl\res\layout-v11\simple_list_item.xml
-View;obj\Debug\90\res\layout\item_district.xml

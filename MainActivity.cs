@@ -14,6 +14,8 @@ using System.Net;
 using SQLite;
 using Android.Util;
 using Refit;
+using Android.Views;
+using Android.Support.V4.View;
 
 namespace Foodi
 {
@@ -25,6 +27,38 @@ namespace Foodi
         private CollapsibleGroupsBehavior collapsibleGroupsBehavior;
         private ExCityAdapter districtAdapter;
         private List<DistrictItem> districts;
+        private Android.Support.V7.Widget.SearchView searchView;
+        private ExCityAdapter SearchAdapter;
+        private List<District> dsSearch;
+        private readonly List<string> coords = new List<string>
+        {
+            "10.771779, 106.697601",
+            "10.787089, 106.735830",
+            "10.784644, 106.686360",
+            "10.758219, 106.703995",
+            "10.755081, 106.665874",
+            "10.745301, 106.634730",
+            "10.740955, 106.713407",
+            "10.729290, 106.636965",
+            "10.831577, 106.819116",
+            "10.771369, 106.667625",
+            "10.767632, 106.642119",
+            "10.873367, 106.654346",
+            "10.800530, 106.679966",
+            "10.810122, 106.652929",
+            "10.787157, 106.628692",
+            "10.759200, 106.597406",
+            "10.807412, 106.704279",
+            "10.856632, 106.738916",
+            "10.838945, 106.664604",
+            "10.667052, 106.718715",
+            "10.735738, 106.556669",
+            "10.547773, 106.866179",
+            "11.016590, 106.505081",
+            "10.884103, 106.577698",
+            "10.805931, 106.599054"
+        };
+        private List<District> dsList;
         
         private readonly SQLiteConnection db = new SQLiteConnection(DatabaseFilePath);
 
@@ -32,7 +66,7 @@ namespace Foodi
         {
             get
             {
-                var sqliteFilename = "district.db3";
+                var sqliteFilename = "district1.db3";
                 string documentsPath = System.Environment.GetFolderPath(System.Environment.SpecialFolder.Personal);
                 var path = System.IO.Path.Combine(documentsPath, sqliteFilename);
                 return path;
@@ -47,8 +81,6 @@ namespace Foodi
             SetContentView(Resource.Layout.activity_main);
 
             InitViews();
-
-
         }
 
         void InitViews()
@@ -56,17 +88,23 @@ namespace Foodi
             toolbar = FindViewById<Android.Support.V7.Widget.Toolbar>(Resource.Id.TbMain);
             radListView = FindViewById<RadListView>(Resource.Id.radListView);
             districts = new List<DistrictItem>();
-            //db.CreateTable<DistrictItem>();
-
+            dsList = new List<District>();
+            db.CreateTable<DistrictItem>();
             if (IsInternet())
             {
                 GetData();
             }
             else
             {
-                Toast.MakeText(this, "No Internet Connected!", ToastLength.Long).Show();
+                //Toast.MakeText(this, "No Internet Connected!", ToastLength.Long).Show();
+                dsList = getDistricts();
+            districtAdapter = new ExCityAdapter(dsList, this);
+            radListView.SetAdapter(districtAdapter);
             }
 
+            dsList = getDistricts();
+            districtAdapter = new ExCityAdapter(dsList, this);
+            radListView.SetAdapter(districtAdapter);
             collapsibleGroupsBehavior = new CollapsibleGroupsBehavior();
             radListView.AddBehavior(collapsibleGroupsBehavior);
             LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this);
@@ -109,12 +147,28 @@ namespace Foodi
                 string json;
                 using (WebClient client = new WebClient())
                 {
-                   json = client.DownloadString(APIs.District);
+                    json = client.DownloadString(APIs.District);
                 };
-
+                int i = 0;
                 districts = JsonConvert.DeserializeObject<List<DistrictItem>>(json);
-                districtAdapter = new ExCityAdapter(districts, this);
-                radListView.SetAdapter(districtAdapter);
+                foreach(var ds in districts)
+                {
+                    if (!IsItemExist(ds.ID, db) && db != null)
+                    {
+                        if(ds.Title != "Chưa rõ" && (ds.Title == "Thành Phố Hồ Chí Minh" || ds.Title == "Quận 1" || ds.Title == "Quận 2" 
+                            || ds.Title == "Quận 3" || ds.Title == "Quận 4" || ds.Title == "Quận 5" || ds.Title == "Quận 6" || ds.Title == "Quận 7" ||
+                            ds.Title == "Quận 8" || ds.Title == "Quận 9" || ds.Title == "Quận 10" || ds.Title == "Quận 11" || ds.Title == "Quận 12"
+                            || ds.Title == "Huyện Nhà Bè" || ds.Title == "Quận Bình Tân" || ds.Title == "Huyện Bình Chánh" || ds.Title == "Quận Bình Thạnh"
+                            || ds.Title == "Quận Tân Bình" || ds.Title == "Huyện Cần Giờ" || ds.Title == "Huyện Củ Chi" || ds.Title == "Quận Thủ Đức" || ds.Title == "Quận Gò Vấp"
+                            || ds.Title == "Huyện Hóc Môn" || ds.Title == "Quận Phú Nhuận" || ds.Title == "Quận Tân Phú"))
+                        {
+                            ds.Created = coords[i];
+                            ds.Updated = "Thành Phố Hồ Chí Minh";
+                            db.Insert(ds);
+                        }
+                        i++;
+                    }
+                }
             }
             catch
             {
@@ -140,5 +194,29 @@ namespace Foodi
             return dsList;
         }
 
+        public override bool OnCreateOptionsMenu(IMenu menu)
+        {
+            MenuInflater.Inflate(Resource.Menu.menu_main, menu);
+            var item = menu.FindItem(Resource.Id.action_search);
+            var search = MenuItemCompat.GetActionView(item);
+            searchView = search.JavaCast<Android.Support.V7.Widget.SearchView>();
+            dsSearch = new List<District>();
+            
+            searchView.QueryTextChange += (s, e) =>
+            {
+                dsSearch.Clear();
+                foreach(var ds in dsList)
+                {
+                    if(ds.Name.ToLower().Contains(e.NewText.ToLower()))
+                    {
+                        dsSearch.Add(ds);
+                    }
+                    SearchAdapter = new ExCityAdapter(dsSearch, this);
+                    radListView.SetAdapter(SearchAdapter);
+                }
+            };
+
+            return true;
+        }
     }
 }

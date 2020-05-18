@@ -14,6 +14,7 @@ C:\Users\thachnls\source\repos\Foodi\Foodi\bin\Debug\Telerik.Xamarin.Android.Pri
 C:\Users\thachnls\source\repos\Foodi\Foodi\obj\Debug\90\MonoAndroid,Version=v9.0.AssemblyAttributes.cs
 C:\Users\thachnls\source\repos\Foodi\Foodi\obj\Debug\90\build.props
 C:\Users\thachnls\source\repos\Foodi\Foodi\obj\Debug\90\adb.props
+C:\Users\thachnls\source\repos\Foodi\Foodi\obj\Debug\90\Foodi.csprojAssemblyReference.cache
 C:\Users\thachnls\source\repos\Foodi\Foodi\obj\Debug\90\_VerifyXamarinAndroidSupportVersions.stamp
 C:\Users\thachnls\source\repos\Foodi\Foodi\obj\Debug\90\stamp\_BuildLibraryImportsCache.stamp
 C:\Users\thachnls\source\repos\Foodi\Foodi\obj\Debug\90\res.flag
@@ -92,6 +93,7 @@ C:\Users\thachnls\source\repos\Foodi\Foodi\obj\Debug\90\res\layout\item_toolbar.
 C:\Users\thachnls\source\repos\Foodi\Foodi\obj\Debug\90\res\layout\item_city.xml
 C:\Users\thachnls\source\repos\Foodi\Foodi\obj\Debug\90\res\drawable\icon_next.xml
 C:\Users\thachnls\source\repos\Foodi\Foodi\obj\Debug\90\res\layout\item_district.xml
+C:\Users\thachnls\source\repos\Foodi\Foodi\obj\Debug\90\res\menu\menu_main.xml
 C:\Users\thachnls\source\repos\Foodi\Foodi\obj\Debug\90\uploadflags.txt
 C:\Users\thachnls\source\repos\Foodi\Foodi\obj\Debug\90\resolvedassemblies.hash
 C:\Users\thachnls\source\repos\Foodi\Foodi\obj\Debug\90\android\assets\Foodi.dll
@@ -277,7 +279,6 @@ C:\Users\thachnls\source\repos\Foodi\Foodi\obj\Debug\90\android\src\crc64a9c1da0
 C:\Users\thachnls\source\repos\Foodi\Foodi\obj\Debug\90\android\src\crc64b1e4d0552e072eb1\MainActivity.java
 C:\Users\thachnls\source\repos\Foodi\Foodi\obj\Debug\90\android\src\crc64b1e4d0552e072eb1\SplashActivity.java
 C:\Users\thachnls\source\repos\Foodi\Foodi\obj\Debug\90\android\src\crc64f26adfbfa5b555f3\District.java
-C:\Users\thachnls\source\repos\Foodi\Foodi\obj\Debug\90\android\src\crc64f26adfbfa5b555f3\DistrictItem.java
 C:\Users\thachnls\source\repos\Foodi\Foodi\obj\Debug\90\android\src\mono\android\app\ApplicationRegistration.java
 C:\Users\thachnls\source\repos\Foodi\Foodi\obj\Debug\90\android\src\mono\android\support\design\chip\ChipGroup_OnCheckedChangeListenerImplementor.java
 C:\Users\thachnls\source\repos\Foodi\Foodi\obj\Debug\90\android\src\mono\android\support\design\widget\AppBarLayout_OnOffsetChangedListenerImplementor.java
@@ -408,5 +409,3 @@ C:\Users\thachnls\source\repos\Foodi\Foodi\obj\Debug\90\stamp\_ConvertResourcesC
 C:\Users\thachnls\source\repos\Foodi\Foodi\obj\Debug\90\stamp\_GenerateJavaStubs.stamp
 C:\Users\thachnls\source\repos\Foodi\Foodi\obj\Debug\90\stamp\_GeneratePackageManagerJava.stamp
 C:\Users\thachnls\source\repos\Foodi\Foodi\obj\Debug\90\stamp\_ResolveLibraryProjectImports.stamp
-C:\Users\thachnls\source\repos\Foodi\Foodi\obj\Debug\90\Foodi.csprojAssemblyReference.cache
-C:\Users\thachnls\source\repos\Foodi\Foodi\obj\Debug\90\res\menu\menu_main.xml

@@ -21,12 +21,14 @@ namespace Foodi.Adapter
     public class ExCityAdapter : ListViewAdapter
     {
         private MainActivity activity;
+       
 
         public ExCityAdapter(IList items, MainActivity context)
             : base(items)
         {
             this.activity = context;
         }
+       
         public override RecyclerView.ViewHolder OnCreateViewHolder(ViewGroup parent, int viewType)
         {
             LayoutInflater inflater = LayoutInflater.From(parent.Context);
@@ -36,8 +38,8 @@ namespace Foodi.Adapter
         public override void OnBindListViewHolder(ListViewHolder holder, int pos)
         {
             DistrictViewHolder vh = (DistrictViewHolder)holder;
-            DistrictItem district = (DistrictItem)Items[pos];
-            vh.txtDistrictName.Text = district.Title;
+            District district = (District)Items[pos];
+            vh.txtDistrictName.Text = district.Name;
         }
         
         public void RefreshList()
