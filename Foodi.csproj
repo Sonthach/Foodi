@@ -83,13 +83,16 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Adapter\ExCityAdapter.cs" />
+    <Compile Include="Adapter\FoodiPlaceAdapter.cs" />
     <Compile Include="APIs.cs" />
+    <Compile Include="CheckConnection.cs" />
     <Compile Include="Constants.cs" />
-    <Compile Include="FoodiPlaces.cs" />
+    <Compile Include="FoodiPlacesActivity.cs" />
     <Compile Include="MainActivity.cs" />
     <Compile Include="Model\District.cs" />
     <Compile Include="Model\DistrictInfo.cs" />
     <Compile Include="Model\DistrictItem.cs" />
+    <Compile Include="Model\FoodiPlace.cs" />
     <Compile Include="Resources\Resource.designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SplashActivity.cs" />
@@ -138,6 +141,9 @@
     <PackageReference Include="sqlite-net-pcl">
       <Version>1.6.292</Version>
     </PackageReference>
+    <PackageReference Include="Syncfusion.Xamarin.SfRating.Android">
+      <Version>18.1.0.53</Version>
+    </PackageReference>
     <PackageReference Include="System.Net.Http">
       <Version>4.3.4</Version>
     </PackageReference>
@@ -157,6 +163,21 @@
       <Version>28.0.0.3</Version>
     </PackageReference>
     <PackageReference Include="Xamarin.Essentials" Version="1.3.1" />
+    <PackageReference Include="Xamarin.GooglePlayServices.Base">
+      <Version>71.1610.1</Version>
+    </PackageReference>
+    <PackageReference Include="Xamarin.GooglePlayServices.Basement">
+      <Version>71.1620.2</Version>
+    </PackageReference>
+    <PackageReference Include="Xamarin.GooglePlayServices.Location">
+      <Version>71.1600.1</Version>
+    </PackageReference>
+    <PackageReference Include="Xamarin.GooglePlayServices.Maps">
+      <Version>71.1610.1</Version>
+    </PackageReference>
+    <PackageReference Include="Xamarin.GooglePlayServices.Tasks">
+      <Version>71.1601.1</Version>
+    </PackageReference>
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\icon.png" />
@@ -196,6 +217,16 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\layout\activity_foodi_places.xml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\item_foodi_places.xml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\map_fragment.xml">
       <SubType>Designer</SubType>
     </AndroidResource>
   </ItemGroup>

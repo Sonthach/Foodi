@@ -18,5 +18,6 @@ namespace Foodi
     {
         public static string District = "https://thongtindoanhnghiep.co/api/city/4/district";
         public static string City = "https://thongtindoanhnghiep.co/api/city";
+        public static string FoodiPlaces = "https://api.tomtom.com/search/2/categorySearch/restaurant.json?key=4uKYcP3DzOACFAgABpcXrvCIQmUIBa2Y&lat=";
     }
 }

@@ -25,11 +25,11 @@ public class DistrictClickListener
 			mono.android.TypeManager.Activate ("Foodi.Adapter.DistrictClickListener, Foodi", "", this, new java.lang.Object[] {  });
 	}
 
-	public DistrictClickListener (crc64b1e4d0552e072eb1.MainActivity p0, com.telerik.widget.list.ListViewAdapter p1)
+	public DistrictClickListener (android.content.Context p0, com.telerik.widget.list.ListViewAdapter p1)
 	{
 		super ();
 		if (getClass () == DistrictClickListener.class)
-			mono.android.TypeManager.Activate ("Foodi.Adapter.DistrictClickListener, Foodi", "Foodi.MainActivity, Foodi:Com.Telerik.Widget.List.ListViewAdapter, Telerik.Xamarin.Android.List", this, new java.lang.Object[] { p0, p1 });
+			mono.android.TypeManager.Activate ("Foodi.Adapter.DistrictClickListener, Foodi", "Android.Content.Context, Mono.Android:Com.Telerik.Widget.List.ListViewAdapter, Telerik.Xamarin.Android.List", this, new java.lang.Object[] { p0, p1 });
 	}
 
 

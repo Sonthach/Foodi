@@ -8,18 +8,18 @@ package com.telerik.android.common;
 
 public final class R {
 	public static final class attr {
-		public static final int fillColor = 0x7f0300f9;
-		public static final int strokeColor = 0x7f0301d9;
+		public static final int fillColor = 0x7f030104;
+		public static final int strokeColor = 0x7f0301f9;
 	}
 	public static final class color {
 		public static final int black = 0x7f05001f;
-		public static final int white = 0x7f050099;
+		public static final int white = 0x7f0500a4;
 	}
 	public static final class layout {
-		public static final int trial_message = 0x7f0b007c;
+		public static final int trial_message = 0x7f0b007e;
 	}
 	public static final class string {
-		public static final int trial_message = 0x7f0e003b;
-		public static final int trial_message_caption = 0x7f0e003c;
+		public static final int trial_message = 0x7f0e004e;
+		public static final int trial_message_caption = 0x7f0e004f;
 	}
 }

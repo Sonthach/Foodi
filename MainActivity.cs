@@ -24,7 +24,6 @@ namespace Foodi
     {
         private Android.Support.V7.Widget.Toolbar toolbar;
         private RadListView radListView;
-        private CollapsibleGroupsBehavior collapsibleGroupsBehavior;
         private ExCityAdapter districtAdapter;
         private List<DistrictItem> districts;
         private Android.Support.V7.Widget.SearchView searchView;
@@ -90,7 +89,7 @@ namespace Foodi
             districts = new List<DistrictItem>();
             dsList = new List<District>();
             db.CreateTable<DistrictItem>();
-            if (IsInternet())
+            if (CheckConnection.IsInternet())
             {
                 GetData();
             }
@@ -114,18 +113,7 @@ namespace Foodi
             SupportActionBar.Title = "Foodi";
         }
 
-        public static bool IsInternet()
-        {
-            try
-            {
-                Dns.GetHostEntry("www.google.com");
-                return true;
-            }
-            catch
-            {
-                return false;
-            }
-        }
+        
 
         private bool IsItemExist(int id, SQLiteConnection db)
         {

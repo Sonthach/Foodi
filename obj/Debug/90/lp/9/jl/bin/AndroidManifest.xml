@@ -1,5 +1,5 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.telerik.widget.gauge">
+    package="com.telerik.android.data">
 
     <application android:allowBackup="true">
     </application>

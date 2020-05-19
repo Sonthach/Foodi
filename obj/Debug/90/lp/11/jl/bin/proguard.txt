@@ -49,6 +49,9 @@
 # view res/layout/abc_search_view.xml #generated:78
 -keep class android.support.v7.widget.SearchView$SearchAutoComplete { <init>(...); }
 
+# view res/layout/data_form_switch_editor.xml #generated:2
+-keep class android.support.v7.widget.SwitchCompat { <init>(...); }
+
 # view res/layout/abc_screen_toolbar.xml #generated:36
 -keep class android.support.v7.widget.Toolbar { <init>(...); }
 
@@ -58,4 +61,10 @@
 
 # view res/layout/tooltip_container.xml #generated:2
 -keep class com.telerik.android.primitives.widget.tooltip.containers.PointerLayout { <init>(...); }
+
+# view res/layout/token.xml #generated:2
+-keep class com.telerik.widget.autocomplete.TokenView { <init>(...); }
+
+# view res/layout/data_form_number_picker.xml #generated:2
+-keep class com.telerik.widget.numberpicker.RadNumberPicker { <init>(...); }
 

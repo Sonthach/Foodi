@@ -36,12 +36,12 @@ namespace Foodi.Adapter
             vh.txtDistrictName.Text = district.Name;
 
             vh.txtDistrictName.Click += (s, e) =>
-            {
-                Intent i = new Intent(activity, typeof(FoodiPlaces));
-                i.PutExtra(Constants.LatLon, districts[pos].LatLon);
-                activity.StartActivity(i);
-            };
-
+             {
+                 Intent i = new Intent(activity, typeof(FoodiPlacesActivity));
+                 i.PutExtra(Constants.LatLon, districts[pos].LatLon);
+                 i.PutExtra(Constants.Name, districts[pos].Name);
+                 activity.StartActivity(i);
+             };
         }
         
         public void RefreshList()
@@ -62,19 +62,24 @@ namespace Foodi.Adapter
     }
     public class DistrictClickListener : Java.Lang.Object, RadListView.IItemClickListener
     {
-        private MainActivity mainAct;
+        private Context context;
         private ListViewAdapter listViewAdapter;
 
-        public DistrictClickListener(MainActivity mainAct, ListViewAdapter adapter)
+        public DistrictClickListener(Context context, ListViewAdapter adapter)
         {
-            this.mainAct = mainAct;
+            this.context = context;
             listViewAdapter = adapter;
         }
 
         public void OnItemClick(int postion, MotionEvent motionEvent)
         {
-            
-            //var item = listViewAdapter.GetItem(postion).ToString().Split("|");
+            /*var item = listViewAdapter.GetItem(postion).ToString().Split("|");
+            if(item.Length > 1)
+            {
+                Intent i = new Intent(context, typeof(FoodiPlacesActivity));
+                //context.LoadMapLayout(item);
+                //context.StartActivity(i);
+            }*/
         }
 
         public void OnItemLongClick(int postion, MotionEvent motionEvent)

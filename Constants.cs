@@ -14,6 +14,7 @@ namespace Foodi
 {
     class Constants
     {
-        public static string LatLon = "LatLog";
+        public static string LatLon = "LatLon";
+        public static string Name = "Name";
     }
 }

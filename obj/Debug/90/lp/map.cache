@@ -4,6 +4,7 @@ SQLitePCLRaw.batteries_v2
 SQLitePCLRaw.core
 SQLitePCLRaw.lib.e_sqlite3
 SQLitePCLRaw.provider.e_sqlite3
+Syncfusion.SfRating.Android
 Telerik.Xamarin.Android.Chart
 Telerik.Xamarin.Android.Common
 Telerik.Xamarin.Android.Data
@@ -49,3 +50,9 @@ Xamarin.Android.Support.Vector.Drawable
 Xamarin.Android.Support.VersionedParcelable
 Xamarin.Android.Support.ViewPager
 Xamarin.Essentials
+Xamarin.GooglePlayServices.Base
+Xamarin.GooglePlayServices.Basement
+Xamarin.GooglePlayServices.Location
+Xamarin.GooglePlayServices.Maps
+Xamarin.GooglePlayServices.Places.PlaceReport
+Xamarin.GooglePlayServices.Tasks
