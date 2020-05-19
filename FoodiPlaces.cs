@@ -20,9 +20,7 @@ namespace Foodi
         {
             base.OnCreate(savedInstanceState);
 
-            // Create your application here
             LatLon = Intent.GetStringExtra(Constants.LatLon);
-            Toast.MakeText(this, LatLon, ToastLength.Long).Show();
         }
     }
 }

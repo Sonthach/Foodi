@@ -129,6 +129,7 @@ LinearLayout;C:\Users\thachnls\source\repos\Foodi\Foodi\obj\Debug\90\lp\6\jl\res
 LinearLayout;C:\Users\thachnls\source\repos\Foodi\Foodi\obj\Debug\90\lp\6\jl\res\layout\default_trackball_content.xml
 LinearLayout;C:\Users\thachnls\source\repos\Foodi\Foodi\obj\Debug\90\lp\6\jl\res\layout\ohlc_trackball_item_content.xml
 LinearLayout;C:\Users\thachnls\source\repos\Foodi\Foodi\obj\Debug\90\lp\6\jl\res\layout\range_trackball_item_content.xml
+LinearLayout;obj\Debug\90\res\layout\activity_foodi_places.xml
 LinearLayout;obj\Debug\90\res\layout\activity_main.xml
 LinearLayout;obj\Debug\90\res\layout\item_city.xml
 LinearLayout;obj\Debug\90\res\layout\item_district.xml
