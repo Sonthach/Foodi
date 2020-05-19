@@ -1,32 +1,26 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
-using Android.App;
-using Android.Arch.Core.Util;
-using Android.Content;
-using Android.OS;
-using Android.Runtime;
+﻿using Android.Content;
 using Android.Support.V7.Widget;
 using Android.Views;
 using Android.Widget;
-using Com.Bumptech.Glide;
 using Com.Telerik.Widget.List;
 using Foodi.Model;
+using System.Collections;
+using System.Collections.Generic;
 
 namespace Foodi.Adapter
 {
     public class ExCityAdapter : ListViewAdapter
     {
         private MainActivity activity;
+        public List<District> districts;
        
 
-        public ExCityAdapter(IList items, MainActivity context)
+        public ExCityAdapter(IList items,MainActivity context)
             : base(items)
         {
             this.activity = context;
+            this.districts = new List<District>();
+            this.districts = items as List<District>;
         }
        
         public override RecyclerView.ViewHolder OnCreateViewHolder(ViewGroup parent, int viewType)
@@ -40,29 +34,20 @@ namespace Foodi.Adapter
             DistrictViewHolder vh = (DistrictViewHolder)holder;
             District district = (District)Items[pos];
             vh.txtDistrictName.Text = district.Name;
+
+            vh.txtDistrictName.Click += (s, e) =>
+            {
+                Intent i = new Intent(activity, typeof(FoodiPlaces));
+                i.PutExtra(Constants.LatLon, districts[pos].LatLon);
+                activity.StartActivity(i);
+            };
+
         }
         
         public void RefreshList()
         {
             Intent i = new Intent(activity, typeof(MainActivity));
             activity.StartActivity(i);
-        }
-    }
-
-    public class CollapseListener : Java.Lang.Object, CollapsibleGroupsBehavior.ICollapseGroupListener
-    {
-        Context context_listener;
-        public CollapseListener(Context context)
-        {
-            context_listener = context;
-        }
-
-        public void OnGroupCollapsed(Java.Lang.Object p0)
-        {
-        }
-
-        public void OnGroupExpanded(Java.Lang.Object p0)
-        {
         }
     }
 
@@ -79,33 +64,21 @@ namespace Foodi.Adapter
     {
         private MainActivity mainAct;
         private ListViewAdapter listViewAdapter;
-        private CollapsibleGroupsBehavior collapsibleGroupsBehavior;
 
-        public DistrictClickListener(MainActivity mainAct, ListViewAdapter adapter, CollapsibleGroupsBehavior collapsibleGroupsBehavior)
+        public DistrictClickListener(MainActivity mainAct, ListViewAdapter adapter)
         {
             this.mainAct = mainAct;
             listViewAdapter = adapter;
-            this.collapsibleGroupsBehavior = collapsibleGroupsBehavior;
         }
 
         public void OnItemClick(int postion, MotionEvent motionEvent)
         {
-            var item = listViewAdapter.GetItem(postion).ToString().Split("|");
-            CollapseListener collapseListener = new CollapseListener(mainAct);
-            if (collapsibleGroupsBehavior.IsGroupCollapsed(listViewAdapter.GetItem(postion)) == false)
-            {
-                collapseListener.OnGroupCollapsed(listViewAdapter.GetItem(postion));
-            }
-            else
-            {
-                collapseListener.OnGroupExpanded(listViewAdapter.GetItem(postion));
-            }
+            
+            //var item = listViewAdapter.GetItem(postion).ToString().Split("|");
         }
 
         public void OnItemLongClick(int postion, MotionEvent motionEvent)
         {
         }
     }
-
-
 }

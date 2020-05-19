@@ -98,15 +98,15 @@ namespace Foodi
             {
                 //Toast.MakeText(this, "No Internet Connected!", ToastLength.Long).Show();
                 dsList = getDistricts();
-            districtAdapter = new ExCityAdapter(dsList, this);
-            radListView.SetAdapter(districtAdapter);
+                districtAdapter = new ExCityAdapter(dsList, this);
+                radListView.SetAdapter(districtAdapter);
             }
 
             dsList = getDistricts();
             districtAdapter = new ExCityAdapter(dsList, this);
             radListView.SetAdapter(districtAdapter);
-            collapsibleGroupsBehavior = new CollapsibleGroupsBehavior();
-            radListView.AddBehavior(collapsibleGroupsBehavior);
+            DistrictClickListener districtClickListener = new DistrictClickListener(this, districtAdapter);
+            radListView.AddItemClickListener(districtClickListener);
             LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this);
             radListView.SetLayoutManager(linearLayoutManager);
 

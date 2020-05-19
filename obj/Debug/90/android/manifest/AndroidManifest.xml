@@ -9,6 +9,7 @@
   <uses-permission android:name="android.permission.INTERNET" />
   <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
   <application android:allowBackup="true" android:icon="@mipmap/ic_launcher" android:label="@string/app_name" android:roundIcon="@mipmap/ic_launcher_round" android:supportsRtl="true" android:theme="@style/AppTheme" android:name="android.app.Application" android:debuggable="true">
+    <activity android:label="FoodiPlaces" android:name="crc64b1e4d0552e072eb1.FoodiPlaces" />
     <activity android:label="@string/app_name" android:theme="@style/MyTheme.Base" android:name="crc64b1e4d0552e072eb1.MainActivity" />
     <activity android:icon="@drawable/icon" android:label="@string/app_name" android:noHistory="true" android:theme="@style/MyTheme.Splash" android:name="crc64b1e4d0552e072eb1.SplashActivity">
       <intent-filter>

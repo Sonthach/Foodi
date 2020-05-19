@@ -254,7 +254,6 @@ C:\Users\thachnls\source\repos\Foodi\Foodi\obj\Debug\90\android\src\com\telerik\
 C:\Users\thachnls\source\repos\Foodi\Foodi\obj\Debug\90\android\src\com\telerik\widget\chart\R.java
 C:\Users\thachnls\source\repos\Foodi\Foodi\obj\Debug\90\android\src\com\telerik\widget\gauge\R.java
 C:\Users\thachnls\source\repos\Foodi\Foodi\obj\Debug\90\android\src\com\telerik\widget\list\R.java
-C:\Users\thachnls\source\repos\Foodi\Foodi\obj\Debug\90\android\src\crc64489a65b38c45415b\CollapseListener.java
 C:\Users\thachnls\source\repos\Foodi\Foodi\obj\Debug\90\android\src\crc64489a65b38c45415b\DistrictClickListener.java
 C:\Users\thachnls\source\repos\Foodi\Foodi\obj\Debug\90\android\src\crc64489a65b38c45415b\DistrictViewHolder.java
 C:\Users\thachnls\source\repos\Foodi\Foodi\obj\Debug\90\android\src\crc64489a65b38c45415b\ExCityAdapter.java
@@ -276,6 +275,7 @@ C:\Users\thachnls\source\repos\Foodi\Foodi\obj\Debug\90\android\src\crc64a0e0a82
 C:\Users\thachnls\source\repos\Foodi\Foodi\obj\Debug\90\android\src\crc64a98abb514ffad9f1\CustomTabsServiceConnectionImpl.java
 C:\Users\thachnls\source\repos\Foodi\Foodi\obj\Debug\90\android\src\crc64a98abb514ffad9f1\KeepAliveService.java
 C:\Users\thachnls\source\repos\Foodi\Foodi\obj\Debug\90\android\src\crc64a9c1da03db46b089\ChartPalette.java
+C:\Users\thachnls\source\repos\Foodi\Foodi\obj\Debug\90\android\src\crc64b1e4d0552e072eb1\FoodiPlaces.java
 C:\Users\thachnls\source\repos\Foodi\Foodi\obj\Debug\90\android\src\crc64b1e4d0552e072eb1\MainActivity.java
 C:\Users\thachnls\source\repos\Foodi\Foodi\obj\Debug\90\android\src\crc64b1e4d0552e072eb1\SplashActivity.java
 C:\Users\thachnls\source\repos\Foodi\Foodi\obj\Debug\90\android\src\crc64f26adfbfa5b555f3\District.java

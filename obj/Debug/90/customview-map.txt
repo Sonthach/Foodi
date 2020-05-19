@@ -88,6 +88,7 @@ ImageView;C:\Users\thachnls\source\repos\Foodi\Foodi\obj\Debug\90\lp\10\jl\res\l
 ImageView;C:\Users\thachnls\source\repos\Foodi\Foodi\obj\Debug\90\lp\10\jl\res\layout\token.xml
 ImageView;C:\Users\thachnls\source\repos\Foodi\Foodi\obj\Debug\90\lp\11\jl\res\layout\simple_group_header_item.xml
 ImageView;C:\Users\thachnls\source\repos\Foodi\Foodi\obj\Debug\90\lp\12\jl\res\layout\drawer_blur_fade_layer.xml
+ImageView;obj\Debug\90\res\layout\item_district.xml
 include;obj\Debug\90\res\layout\activity_main.xml
 item;C:\Users\thachnls\source\repos\Foodi\Foodi\obj\Debug\90\lp\10\jl\res\drawable\autocomplete_default_backgound.xml
 item;C:\Users\thachnls\source\repos\Foodi\Foodi\obj\Debug\90\lp\10\jl\res\drawable\data_form_list_item_states.xml

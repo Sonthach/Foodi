@@ -1,3 +1,6 @@
+Foodi.FoodiPlaces, Foodi;crc64b1e4d0552e072eb1.FoodiPlaces
+Foodi.FoodiPlaces;crc64b1e4d0552e072eb1.FoodiPlaces
+foodi.FoodiPlaces;crc64b1e4d0552e072eb1.FoodiPlaces
 Foodi.MainActivity, Foodi;crc64b1e4d0552e072eb1.MainActivity
 Foodi.MainActivity;crc64b1e4d0552e072eb1.MainActivity
 foodi.MainActivity;crc64b1e4d0552e072eb1.MainActivity
@@ -10,9 +13,6 @@ foodi.model.District;crc64f26adfbfa5b555f3.District
 Foodi.Adapter.ExCityAdapter, Foodi;crc64489a65b38c45415b.ExCityAdapter
 Foodi.Adapter.ExCityAdapter;crc64489a65b38c45415b.ExCityAdapter
 foodi.adapter.ExCityAdapter;crc64489a65b38c45415b.ExCityAdapter
-Foodi.Adapter.CollapseListener, Foodi;crc64489a65b38c45415b.CollapseListener
-Foodi.Adapter.CollapseListener;crc64489a65b38c45415b.CollapseListener
-foodi.adapter.CollapseListener;crc64489a65b38c45415b.CollapseListener
 Foodi.Adapter.DistrictViewHolder, Foodi;crc64489a65b38c45415b.DistrictViewHolder
 Foodi.Adapter.DistrictViewHolder;crc64489a65b38c45415b.DistrictViewHolder
 foodi.adapter.DistrictViewHolder;crc64489a65b38c45415b.DistrictViewHolder

@@ -84,6 +84,8 @@
   <ItemGroup>
     <Compile Include="Adapter\ExCityAdapter.cs" />
     <Compile Include="APIs.cs" />
+    <Compile Include="Constants.cs" />
+    <Compile Include="FoodiPlaces.cs" />
     <Compile Include="MainActivity.cs" />
     <Compile Include="Model\District.cs" />
     <Compile Include="Model\DistrictInfo.cs" />

@@ -12,7 +12,7 @@ using Android.Widget;
 
 namespace Foodi.Model
 {
-    class District : Java.Lang.Object
+    public class District : Java.Lang.Object
     {
         public int ID { set; get; }
         public string Name { set; get; }
