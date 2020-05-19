@@ -94,6 +94,7 @@ C:\Users\thachnls\source\repos\Foodi\Foodi\obj\Debug\90\res\layout\item_city.xml
 C:\Users\thachnls\source\repos\Foodi\Foodi\obj\Debug\90\res\drawable\icon_next.xml
 C:\Users\thachnls\source\repos\Foodi\Foodi\obj\Debug\90\res\layout\item_district.xml
 C:\Users\thachnls\source\repos\Foodi\Foodi\obj\Debug\90\res\menu\menu_main.xml
+C:\Users\thachnls\source\repos\Foodi\Foodi\obj\Debug\90\res\layout\activity_foodi_places.xml
 C:\Users\thachnls\source\repos\Foodi\Foodi\obj\Debug\90\uploadflags.txt
 C:\Users\thachnls\source\repos\Foodi\Foodi\obj\Debug\90\resolvedassemblies.hash
 C:\Users\thachnls\source\repos\Foodi\Foodi\obj\Debug\90\android\assets\Foodi.dll
