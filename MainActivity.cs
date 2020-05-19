@@ -16,6 +16,8 @@ using Android.Util;
 using Refit;
 using Android.Views;
 using Android.Support.V4.View;
+using Android.Support.Design.Widget;
+using Android.Animation;
 
 namespace Foodi
 {
@@ -58,7 +60,13 @@ namespace Foodi
             "10.805931, 106.599054"
         };
         private List<District> dsList;
-        
+
+        private static bool isfabOpen;
+        private FloatingActionButton fabMain;
+        private FloatingActionButton fabAccount1;
+        private FloatingActionButton fabAccount2;
+        private View bgFabMenu;
+
         private readonly SQLiteConnection db = new SQLiteConnection(DatabaseFilePath);
 
         public static string DatabaseFilePath
@@ -80,8 +88,106 @@ namespace Foodi
             SetContentView(Resource.Layout.activity_main);
 
             InitViews();
+
+            fabMain = FindViewById<FloatingActionButton>(Resource.Id.fab_main);
+            fabAccount1 = FindViewById<FloatingActionButton>(Resource.Id.fab_account1);
+            fabAccount2 = FindViewById<FloatingActionButton>(Resource.Id.fab_account2);
+            bgFabMenu = FindViewById<View>(Resource.Id.bg_fab_menu);
+
+            fabMain.Click += (o, e) =>
+            {
+                if (!isfabOpen)
+                    ShowFabMenu();
+                else
+                    CloseFabMenu();
+            };
+            fabAccount2.Click += (o, e) =>
+            {
+                CloseFabMenu();
+                GridLayoutManager gridLayoutManager = new GridLayoutManager(this, 2, LinearLayoutManager.Vertical, false);
+                radListView.SetLayoutManager(gridLayoutManager);
+                //return true;
+
+            };
+            fabAccount1.Click += (o, e) =>
+            {
+                CloseFabMenu();
+                //Toast.MakeText(this, "Account1!", ToastLength.Short).Show();
+                LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this);
+                radListView.SetLayoutManager(linearLayoutManager);
+                //return true;
+            };
+            bgFabMenu.Click += (o, e) =>
+            {
+
+            };
         }
 
+        private void CloseFabMenu()
+        {
+            isfabOpen = false;
+            fabAccount1.Visibility = ViewStates.Visible;
+            fabAccount2.Visibility = Android.Views.ViewStates.Visible;
+            bgFabMenu.Visibility = Android.Views.ViewStates.Visible;
+
+            fabMain.Animate().Rotation(90f);
+            bgFabMenu.Animate().Alpha(1f);
+            fabAccount1.Animate()
+                .TranslationY(0f)
+                .Rotation(90f);
+            fabAccount2.Animate()
+                .TranslationY(0f)
+                .Rotation(90f).SetListener(new FabAnimatorListener(bgFabMenu, fabAccount1, fabAccount2));
+
+        }
+
+        private void ShowFabMenu()
+        {
+            isfabOpen = true;
+            fabAccount1.Visibility = ViewStates.Visible;
+            fabAccount2.Visibility = Android.Views.ViewStates.Visible;
+            bgFabMenu.Visibility = Android.Views.ViewStates.Visible;
+
+            fabMain.Animate().Rotation(135f);
+            bgFabMenu.Animate().Alpha(1f);
+            fabAccount2.Animate()
+                .TranslationY(-Resources.GetDimension(Resource.Dimension.standard_100))
+                .Rotation(0f);
+            fabAccount1.Animate()
+                .TranslationY(-Resources.GetDimension(Resource.Dimension.standard_55))
+                .Rotation(0f);
+
+        }
+
+        private class FabAnimatorListener : Java.Lang.Object, Animator.IAnimatorListener
+        {
+            View[] viewsToHide;
+            public FabAnimatorListener(params View[] viewsToHide)
+            {
+                this.viewsToHide = viewsToHide;
+            }
+            public void OnAnimationCancel(Animator animation)
+            {
+
+            }
+
+            public void OnAnimationEnd(Animator animation)
+            {
+                if (!isfabOpen)
+                    foreach (var view in viewsToHide)
+                        view.Visibility = ViewStates.Gone;
+            }
+
+            public void OnAnimationRepeat(Animator animation)
+            {
+
+            }
+
+            public void OnAnimationStart(Animator animation)
+            {
+
+            }
+        }
         void InitViews()
         {
             toolbar = FindViewById<Android.Support.V7.Widget.Toolbar>(Resource.Id.TbMain);

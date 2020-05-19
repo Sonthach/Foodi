@@ -1,5 +1,7 @@
 adaptive-icon;obj\Debug\90\res\mipmap-anydpi-v26\ic_launcher.xml
 adaptive-icon;obj\Debug\90\res\mipmap-anydpi-v26\ic_launcher_round.xml
+android.support.design.widget.CoordinatorLayout;obj\Debug\90\res\layout\activity_main.xml
+android.support.design.widget.FloatingActionButton;obj\Debug\90\res\layout\activity_main.xml
 android.support.v7.widget.CardView;obj\Debug\90\res\layout\item_city.xml
 android.support.v7.widget.CardView;obj\Debug\90\res\layout\item_district.xml
 android.support.v7.widget.SwitchCompat;C:\Users\thachnls\source\repos\Foodi\Foodi\obj\Debug\90\lp\11\jl\res\layout\data_form_switch_editor.xml
@@ -55,6 +57,7 @@ dimen;C:\Users\thachnls\source\repos\Foodi\Foodi\obj\Debug\90\lp\11\jl\res\value
 dimen;C:\Users\thachnls\source\repos\Foodi\Foodi\obj\Debug\90\lp\12\jl\res\values\dimens.xml
 dimen;C:\Users\thachnls\source\repos\Foodi\Foodi\obj\Debug\90\lp\13\jl\res\values\dimens.xml
 dimen;C:\Users\thachnls\source\repos\Foodi\Foodi\obj\Debug\90\lp\7\jl\res\values\dimens.xml
+dimen;obj\Debug\90\res\values\dimens.xml
 EditText;C:\Users\thachnls\source\repos\Foodi\Foodi\obj\Debug\90\lp\11\jl\res\layout\data_form_date_editor.xml
 EditText;C:\Users\thachnls\source\repos\Foodi\Foodi\obj\Debug\90\lp\11\jl\res\layout\data_form_decimal_editor.xml
 EditText;C:\Users\thachnls\source\repos\Foodi\Foodi\obj\Debug\90\lp\11\jl\res\layout\data_form_integer_editor.xml
@@ -155,7 +158,10 @@ PaletteEntryCollection;C:\Users\thachnls\source\repos\Foodi\Foodi\obj\Debug\90\l
 PaletteEntryCollection;C:\Users\thachnls\source\repos\Foodi\Foodi\obj\Debug\90\lp\7\jl\res\xml\chart_palettes_default_dark.xml
 PaletteEntryCollection;C:\Users\thachnls\source\repos\Foodi\Foodi\obj\Debug\90\lp\7\jl\res\xml\chart_palettes_default_light.xml
 PaletteEntryCollection;C:\Users\thachnls\source\repos\Foodi\Foodi\obj\Debug\90\lp\7\jl\res\xml\chart_palettes_light_selected.xml
+path;obj\Debug\90\res\drawable\gridview_icon.xml
+path;obj\Debug\90\res\drawable\hospital.xml
 path;obj\Debug\90\res\drawable\icon_next.xml
+path;obj\Debug\90\res\drawable\listview_icon.xml
 paths;C:\Users\thachnls\source\repos\Foodi\Foodi\obj\Debug\90\lp\51\jl\res\xml\xamarin_essentials_fileprovider_file_paths.xml
 ProgressBar;C:\Users\thachnls\source\repos\Foodi\Foodi\obj\Debug\90\lp\12\jl\res\layout\on_demand_automatic.xml
 RadioGroup;C:\Users\thachnls\source\repos\Foodi\Foodi\obj\Debug\90\lp\11\jl\res\layout\data_form_radio_group_editor.xml
@@ -194,6 +200,7 @@ resources;C:\Users\thachnls\source\repos\Foodi\Foodi\obj\Debug\90\lp\8\jl\res\va
 resources;C:\Users\thachnls\source\repos\Foodi\Foodi\obj\Debug\90\lp\9\jl\res\values\colors.xml
 resources;C:\Users\thachnls\source\repos\Foodi\Foodi\obj\Debug\90\lp\9\jl\res\values\strings.xml
 resources;obj\Debug\90\res\values\colors.xml
+resources;obj\Debug\90\res\values\dimens.xml
 resources;obj\Debug\90\res\values\ic_launcher_background.xml
 resources;obj\Debug\90\res\values\strings.xml
 resources;obj\Debug\90\res\values\styles.xml
@@ -289,6 +296,10 @@ TextView;obj\Debug\90\res\layout\item_city.xml
 TextView;obj\Debug\90\res\layout\item_district.xml
 TextView;obj\Debug\90\res\layout\item_foodi_places.xml
 ToggleButton;C:\Users\thachnls\source\repos\Foodi\Foodi\obj\Debug\90\lp\11\jl\res\layout\data_form_toggle_button_editor.xml
+vector;obj\Debug\90\res\drawable\gridview_icon.xml
+vector;obj\Debug\90\res\drawable\hospital.xml
 vector;obj\Debug\90\res\drawable\icon_next.xml
+vector;obj\Debug\90\res\drawable\listview_icon.xml
 View;C:\Users\thachnls\source\repos\Foodi\Foodi\obj\Debug\90\lp\11\jl\res\layout\token.xml
 View;C:\Users\thachnls\source\repos\Foodi\Foodi\obj\Debug\90\lp\12\jl\res\layout-v11\simple_list_item.xml
+View;obj\Debug\90\res\layout\activity_main.xml

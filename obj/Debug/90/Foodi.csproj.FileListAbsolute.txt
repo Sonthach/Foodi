@@ -491,3 +491,8 @@ C:\Users\thachnls\source\repos\Foodi\Foodi\obj\Debug\90\stamp\_GenerateJavaStubs
 C:\Users\thachnls\source\repos\Foodi\Foodi\obj\Debug\90\stamp\_GeneratePackageManagerJava.stamp
 C:\Users\thachnls\source\repos\Foodi\Foodi\obj\Debug\90\stamp\_ResolveLibraryProjectImports.stamp
 C:\Users\thachnls\source\repos\Foodi\Foodi\obj\Debug\90\android\src\crc64489a65b38c45415b\FoodiPlaceAdapter_FoodiPlacesClickListenner.java
+C:\Users\thachnls\source\repos\Foodi\Foodi\obj\Debug\90\res\values\dimens.xml
+C:\Users\thachnls\source\repos\Foodi\Foodi\obj\Debug\90\res\drawable\gridview_icon.xml
+C:\Users\thachnls\source\repos\Foodi\Foodi\obj\Debug\90\res\drawable\hospital.xml
+C:\Users\thachnls\source\repos\Foodi\Foodi\obj\Debug\90\res\drawable\listview_icon.xml
+C:\Users\thachnls\source\repos\Foodi\Foodi\obj\Debug\90\android\src\crc64b1e4d0552e072eb1\MainActivity_FabAnimatorListener.java
