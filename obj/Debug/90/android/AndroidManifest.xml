@@ -17,7 +17,7 @@
     <uses-library android:name="org.apache.http.legacy" android:required="false" />
     <activity android:name="crc64b1e4d0552e072eb1.FoodiPlacesActivity" android:label="FoodiPlaces" android:theme="@style/MyTheme.Base" />
     <activity android:name="crc64b1e4d0552e072eb1.MainActivity" android:label="@string/app_name" android:theme="@style/MyTheme.Base" />
-    <activity android:name="crc64b1e4d0552e072eb1.SplashActivity" android:icon="@drawable/icon" android:label="@string/app_name" android:noHistory="true" android:theme="@style/MyTheme.Splash">
+    <activity android:name="crc64b1e4d0552e072eb1.SplashActivity" android:icon="@drawable/icon_new" android:label="@string/app_name" android:noHistory="true" android:theme="@style/MyTheme.Splash">
       <intent-filter>
         <action android:name="android.intent.action.MAIN" />
         <category android:name="android.intent.category.LAUNCHER" />

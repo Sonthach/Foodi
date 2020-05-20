@@ -1,1 +1,1 @@
-<Devices><Device id="192.168.215.101:5555"><ResultingAbi>x86</ResultingAbi><SdkVersion>25</SdkVersion></Device></Devices>
+<Devices><Device id="192.168.215.101:5555"><ResultingAbi>x86</ResultingAbi><SdkVersion>25</SdkVersion></Device><Device id="NB1GAD17A0700033"><ResultingAbi></ResultingAbi><SdkVersion>28</SdkVersion></Device></Devices>

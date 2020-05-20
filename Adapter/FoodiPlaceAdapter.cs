@@ -13,6 +13,7 @@ using Android.Runtime;
 using Android.Support.V7.Widget;
 using Android.Views;
 using Android.Widget;
+using Com.Bumptech.Glide;
 using Com.Telerik.Widget.Chart.Visualization.Behaviors.Animations;
 using Com.Telerik.Widget.List;
 using Foodi.Model;
@@ -39,21 +40,21 @@ namespace Foodi.Adapter
         public override void OnBindListViewHolder(ListViewHolder holder, int position)
         {
             FoodiPlaceViewHolder viewHolder = (FoodiPlaceViewHolder)holder;
-            Results touristPlace = (Results)Items[position];
-            viewHolder.txtNameFoodiPlaces.Text = touristPlace.poi.name;
-            //Glide.With(context).Load(int.Parse(touristPlace.info)).Into(viewHolder.image);
+            Results foodiPlace = (Results)Items[position];
+            viewHolder.txtNameFoodiPlaces.Text = foodiPlace.poi.name;
+            Glide.With(context).Load(int.Parse(foodiPlace.info)).Into(viewHolder.imvFoodiPlaces);
         }
 
         public class FoodiPlaceViewHolder : ListViewHolder
         {
             public TextView txtNameFoodiPlaces;
-            public ImageView image;
+            public ImageView imvFoodiPlaces;
 
             public FoodiPlaceViewHolder(View itemView)
                 : base(itemView)
             {
                 txtNameFoodiPlaces = (TextView)itemView.FindViewById(Resource.Id.txtNameFoodiPlaces);
-                //image = (ImageView)itemView.FindViewById(Resource.Id.placeImage);
+                imvFoodiPlaces = (ImageView)itemView.FindViewById(Resource.Id.imvFoodiPlaces);
             }
         }
 

@@ -66,6 +66,7 @@ namespace Foodi
         private FloatingActionButton fabAccount1;
         private FloatingActionButton fabAccount2;
         private View bgFabMenu;
+        public LinearLayout lnProgressBar;
 
         private readonly SQLiteConnection db = new SQLiteConnection(DatabaseFilePath);
 
@@ -89,11 +90,7 @@ namespace Foodi
 
             InitViews();
 
-            fabMain = FindViewById<FloatingActionButton>(Resource.Id.fab_main);
-            fabAccount1 = FindViewById<FloatingActionButton>(Resource.Id.fab_account1);
-            fabAccount2 = FindViewById<FloatingActionButton>(Resource.Id.fab_account2);
-            bgFabMenu = FindViewById<View>(Resource.Id.bg_fab_menu);
-
+            
             fabMain.Click += (o, e) =>
             {
                 if (!isfabOpen)
@@ -192,6 +189,11 @@ namespace Foodi
         {
             toolbar = FindViewById<Android.Support.V7.Widget.Toolbar>(Resource.Id.TbMain);
             radListView = FindViewById<RadListView>(Resource.Id.radListView);
+            fabMain = FindViewById<FloatingActionButton>(Resource.Id.fab_main);
+            fabAccount1 = FindViewById<FloatingActionButton>(Resource.Id.fab_account1);
+            fabAccount2 = FindViewById<FloatingActionButton>(Resource.Id.fab_account2);
+            bgFabMenu = FindViewById<View>(Resource.Id.bg_fab_menu);
+            lnProgressBar = FindViewById<LinearLayout>(Resource.Id.lnProgressBar);
             districts = new List<DistrictItem>();
             dsList = new List<District>();
             db.CreateTable<DistrictItem>();
@@ -201,7 +203,6 @@ namespace Foodi
             }
             else
             {
-                //Toast.MakeText(this, "No Internet Connected!", ToastLength.Long).Show();
                 dsList = getDistricts();
                 districtAdapter = new ExCityAdapter(dsList, this);
                 radListView.SetAdapter(districtAdapter);

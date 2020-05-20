@@ -13,7 +13,7 @@ using Android.Widget;
 
 namespace Foodi
 {
-    [Activity(Label = "@string/app_name", Theme = "@style/MyTheme.Splash", Icon = "@drawable/icon", MainLauncher = true, NoHistory = true)]
+    [Activity(Label = "@string/app_name", Theme = "@style/MyTheme.Splash", Icon = "@drawable/icon_new", MainLauncher = true, NoHistory = true)]
     public class SplashActivity : Activity
     {
         static readonly string TAG = "X:" + typeof(SplashActivity).Name;

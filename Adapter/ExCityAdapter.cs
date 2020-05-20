@@ -34,14 +34,16 @@ namespace Foodi.Adapter
             DistrictViewHolder vh = (DistrictViewHolder)holder;
             District district = (District)Items[pos];
             vh.txtDistrictName.Text = district.Name;
-
+            
             vh.txtDistrictName.Click += (s, e) =>
              {
+                 activity.lnProgressBar.Visibility = ViewStates.Visible;
                  Intent i = new Intent(activity, typeof(FoodiPlacesActivity));
                  i.PutExtra(Constants.LatLon, districts[pos].LatLon);
                  i.PutExtra(Constants.Name, districts[pos].Name);
                  activity.StartActivity(i);
              };
+            activity.lnProgressBar.Visibility = ViewStates.Gone;
         }
         
         public void RefreshList()

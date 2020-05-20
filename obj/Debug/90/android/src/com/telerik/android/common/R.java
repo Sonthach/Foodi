@@ -13,10 +13,10 @@ public final class R {
 	}
 	public static final class color {
 		public static final int black = 0x7f05001f;
-		public static final int white = 0x7f0500a4;
+		public static final int white = 0x7f0500a5;
 	}
 	public static final class layout {
-		public static final int trial_message = 0x7f0b007e;
+		public static final int trial_message = 0x7f0b0081;
 	}
 	public static final class string {
 		public static final int trial_message = 0x7f0e004e;

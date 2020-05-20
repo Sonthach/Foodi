@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#9000"
+    android:gravity= "center"
+    tools:showIn="@layout/activity_main">
+
+    <ProgressBar
+        android:progressDrawable="@drawable/custom_progress_bar"
+        android:background= "@drawable/circula_shape"
+        style="?android:attr/progressBarStyleLarge"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:id="@+id/progressBar"
+        android:progress = "50"        
+        android:max="100"
+        android:indeterminate ="true" />
+    <TextView
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:padding="5dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Loading"/>
+</LinearLayout>
